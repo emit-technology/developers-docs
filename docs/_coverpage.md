@@ -4,6 +4,6 @@
 
 > **** 
 
-[GitHub](https://github.com/emit-technology/) [Get Started](/#/en-us/ ':target="_self"')
+[GitHub](https://github.com/emit-technology/) [Get Started](/#/ ':target="_self"')
 
 ![color](#fff)
