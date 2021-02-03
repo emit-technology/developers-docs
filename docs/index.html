@@ -12,12 +12,18 @@
   <!-- Global site tag (gtag.js) - Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-YGGC8E2M1C"></script>
   <link rel="shortcut icon" type="image/png" href="./_media/img/favicon.png" />
+  <link rel="stylesheet" href="./_media/css/mermaid.min.css">
+  <script src="./_media/js/mermaid.min.js"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
 
     gtag('config', 'G-YGGC8E2M1C');
+
+    var num = 0;
+    mermaid.initialize({ startOnLoad: false });
+
   </script>
 </head>
 <body>
@@ -31,12 +37,25 @@
       loadSidebar: true,
       subMaxLevel: 3,
       coverpage: false,
-      themeColor: '#000',
+      themeColor: '#000000',
       name: 'EMIT Developers Docs',
       repo: 'https://github.com/emit-technology',
       ga:'G-YGGC8E2M1C',
-
-
+      auto2top: true,
+      executeScript: true,
+      markdown:{
+        smartypants: true,
+        renderer: {
+          code: function(code, lang) {
+            if (lang === "mermaid") {
+              return (
+                      '<div class="mermaid">' + mermaid.render('mermaid-svg-' + num++, code) + "</div>"
+              );
+            }
+            return this.origin.code.apply(this, arguments);
+          }
+        }
+      }
     }
   </script>
   <script src="./_media/js/docsify.min.js"></script>
