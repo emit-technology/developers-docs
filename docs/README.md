@@ -1,5 +1,7 @@
 # E.M.I.T. Introduction
 
+<center class = "half"><a href="https://emit.technology"><img src = "./_media/img/favicon.png"></a></center>
+
 ### Does the crypto world have an economically viable model?
 
 When we look at the crypto world as a space that exists independently of the real world and is no longer affected by the real world except for the real people as the economic driver of this world, then we will face the question of whether this world is complete in terms of its economic attributes?
